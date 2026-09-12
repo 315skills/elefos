@@ -1,0 +1,76 @@
+
+
+/* ===================== SANDBOX ==================== */
+div#notification {
+    background: var(--bgss);
+} div#notification p { font-family: Consolas, Menlo, monospace; }
+div#notification i.fa-copy { font-size: 100%; }
+
+section#main { min-height: 100%; }
+div#mainWindow { border: 1px solid var(--grey-2); width: var(--dslEditorWidth); }
+div#codeEditingPart, div#codeResult, div#resultPart { min-height: 40vw; max-height: 45vh; }
+#codeEditingPart, #codeResult { resize: horizontal; flex-shrink: 0; border-right: 1px solid var(--grey-2); }
+#codeEditingPart { width: 40%; min-width: 0; max-width: 100%; }
+#codeResult { width: 30%; min-width: 0; max-width: 75%; }
+#resultPart { min-width: 0; }
+
+#codeResult > div { resize: vertical; overflow: hidden; min-height: 4%; }
+
+
+div#scrollToBottomCaption span {
+    transform: translateY(-0.25em) scaleY(1.25);
+    animation: arrowsCycle 2.5s infinite;
+} @keyframes arrowsCycle {
+    0%, 100% { transform: translateY(-0.25em) scaleY(1.25); }
+    50% { transform: translateY(0) scaleY(1); }
+}
+
+/* TF: 001 placeholder */
+/* ================================================= */
+
+/* ========== ALLBENEFITS #ALLFEATURES HERE =========== */
+/* #allFeatures { grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(2, minmax(0, auto)); }
+#allFeatures .alpha { grid-column: span 1; } #allFeatures .beta, #allFeatures .emptyCard { display: none; }
+#architectureBenefitsCont.mainCont { grid-template-columns: repeat(1, 1fr); } */
+.alpha, .beta { min-height: 31.5vh; } 
+main div.cardsSection div.w-100.flex.fd-r.jc-se div.emptyCard,
+main div.cardsSection div.w-100.flex.fd-r.jc-se section { min-height: 31.5vh; }
+
+/* @media (min-width: 480px) {
+    #allFeatures { grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(2, minmax(0, auto)); }
+    #allFeatures .alpha { grid-column: span 1; } #allFeatures .beta, #allFeatures .emptyCard { display: none; }
+    #architectureBenefitsCont.mainCont { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+} @media (min-width: 768px) {
+    #allFeatures { grid-template-columns: repeat(24, 1fr); grid-template-rows: repeat(2, minmax(0, auto)); }
+    #allFeatures .alpha { grid-column: span 24; } #allFeatures .beta, #allFeatures .emptyCard { display: none; }
+    #architectureBenefitsCont.mainCont { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+} @media (min-width: 1080px) { */
+
+    /* #allFeatures { grid-template-columns: repeat(58, 1fr); grid-template-rows: repeat(5, minmax(0, auto)); }
+    #allFeatures .alpha { grid-column: span 50; } #allFeatures .beta { grid-column: span 4; overflow: hidden; }
+    #allFeatures .beta, #allFeatures .emptyCard { display: flex; }
+    #architectureBenefitsCont.mainCont { grid-template-columns: repeat(4, 1fr); grid-template-rows: auto; }
+    .firstSpaceRow { min-height: 0; max-height: calc(var(--xl) * 2); } .firstSpaceRow svg { display: none; }
+} @media (min-width: 1440px) {
+    #allFeatures { grid-template-columns: repeat(58, 1fr); grid-template-rows: repeat(5, minmax(0, auto)); }
+    #allFeatures .alpha { grid-column: span 46; } #allFeatures .beta { grid-column: span 6; }
+    #architectureBenefitsCont.mainCont { grid-template-columns: repeat(4, 1fr); grid-template-rows: auto; }
+} */
+
+.emptyCard svg, .emptyCard span { color: var(--grey-5); transition: opacity 0.315s ease; }
+.emptyCard span { opacity: 0.5; } .emptyCard svg { opacity: 0.25; }
+
+.mainCont .cardBenefit { display: flex; flex-direction: column; gap: var(--m);
+    padding: var(--l); position: relative; overflow: hidden; }
+
+#noDeps div.c-tc.p-a { opacity: 0.5; z-index: -1; }
+
+div#noUpdates { padding-bottom: 0; }
+#noUpdates div#noUpdatesAnimPlace { border-bottom: none; border-radius: var(--m) var(--m) 0 0; max-height: 25vh; 
+    transition: max-height 0.315s ease, border-color 0.315s 0.31s ease; }
+#downloadingsOrganizerAnim { transition: opacity 0.315s ease;}
+#downloadingsOrganizerAnim div { border-bottom: solid 1px var(--grey-1); z-index: -1; max-height: 5vh;
+    transition: opacity 0.315s ease, font-size 0.315s 0.25s ease, max-height 0.315s 0.25s ease, padding 0.315s 0.25s ease; }
+#downloadingsOrganizerAnim span { font-size: 0.75em; }
+
+/* ================================================= */
